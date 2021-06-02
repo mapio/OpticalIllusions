@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git checkout master
-pipenv run jupyter nbconvert --execute --to html OpticalIllusions.ipynb
+jupyter nbconvert --execute --to html OpticalIllusions.ipynb
 git checkout gh-pages
 mv -f OpticalIllusions.html index.html
 git commit --amend -m'Initial commit' index.html
